@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+Project: Real-time Educational Presentation from Speech using AI and NLP
+========================================================================
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Abstract
+--------
 
-## Available Scripts
+Are you tired of spending hours preparing presentations for your classes or meetings? Our AI-powered educational presentation generator can save you time and effort by dynamically creating presentations in real-time based on your live speech input. With the ability to generate text and images from Wikipedia and other sources, you can be sure that your presentation will always be informative and up-to-date. Plus, with the option to adjust the level of expertise for your target audience, you can customize your presentation to meet the needs of any group. And, once you're finished, the system can even generate a summary and export it to a PDF document for easy study materials. Say goodbye to boring presentations and hello to engaging and informative ones with our AI-powered educational presentation generator.
 
-In the project directory, you can run:
+Features
+--------
 
-### `npm start`
+-   Convert live speech to text and generate text and images in real-time
+-   Use Wikipedia and other sources to dynamically present educational content on screen
+-   Allow users to adjust the level of expertise for their target audience
+-   Record presentation and generate summary as study materials, and export it to a PDF document
+-   Generate questions and answers from the summary to further aid in studying
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Target audience
+---------------
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-   Educators
+-   Lecturers
+-   Speakers of all types
+-   Online meetings (Google Meet/Zoom)
 
-### `npm test`
+Benefits
+--------
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Saves time and effort by automating the process of creating presentations
+-   Provides up-to-date and informative content from various sources, including Wikipedia
+-   Customizable expertise levels to cater to different target audiences
+-   Generates study materials, including summaries, questions, and answers, to aid in learning and studying.
 
-### `npm run build`
+Implementation
+--------------
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project will use speech-to-text technology and AI/NLP to identify keywords and generate educational presentations in real-time. It will also use APIs to access Wikipedia and other sources to generate text and images. The system will allow users to adjust the level of expertise and record the presentation, generating a summary and study materials in the process. The generated content, including summaries, questions, and answers, will be stored in a database for later retrieval and use.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Conclusion
+----------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The AI-powered educational presentation generator offers a powerful tool for delivering engaging and informative presentations for educational purposes. By automating the process of creating presentations, it saves time and effort while providing up-to-date and informative content. With its customizable expertise levels and study materials generation, it caters to different target audiences and aids in learning and studying.
