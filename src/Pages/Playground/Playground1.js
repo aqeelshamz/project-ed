@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { proficiencyLevels } from "../../utils/utils";
 import "./Playground.css";
@@ -8,6 +8,7 @@ import SpeechRecognition, {
 } from "react-speech-recognition";
 
 function Playground1() {
+  const keyword_extractor = require("keyword-extractor");
   const {
     transcript,
     listening,
@@ -18,10 +19,33 @@ function Playground1() {
   const [showCaptions, setShowCaptions] = useState(false);
   const [captions, setCaptions] = useState("");
 
+  const [timerIds, setTimerIds] = useState([]);
+  useEffect(() => {
+    // for (const id of timerIds) {
+    //   clearTimeout(id);
+    // }
+
+    // const keywords = keyword_extractor.extract(transcript, {
+    //   language: "english",
+    //   remove_digits: true,
+    //   return_changed_case: true,
+    //   remove_duplicates: false,
+    // });
+
+    console.log(transcript);
+
+    // const timer = () =>
+    //   setTimeout(() => {
+    //     if (keywords.length > 1) {
+    //       processData(keywords);
+    //     }
+    //   }, 2500);
+    // const timerId = timer();
+    // timerIds.push(timerId);
+    // setTimerIds([...timerIds]);
+  }, [transcript]);
+
   return (
-
-
-  
     <div className="playground">
       <div>
         <p
@@ -120,7 +144,7 @@ function Playground1() {
                   continuous: true,
                 });
               } else {
-                SpeechRecognition.stopListening();  
+                SpeechRecognition.stopListening();
               }
             }}
             style={{ background: listening ? "dodgerblue" : "#a61930" }}
