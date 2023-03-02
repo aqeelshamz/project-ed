@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/PlayGround" element={PlayGround} />
+          <Route exact path="/PlayGround" element={<PlayGround/>} />
         </Routes>
       </Router>
     </>
