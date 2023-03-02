@@ -1,9 +1,11 @@
 import React from "react";
+import "./Home.css"
 
 function Home() {
   return (
-    <div>
-      Helloo gooys!!
+    <div className="main">
+      <p id="title">Dypres</p>
+      <p id="subtitle">Dynamic Education</p>
       <br />
       <button onClick={() => (window.location.href = "/PlayGround")}>
         Go to PlayGround ⚡
