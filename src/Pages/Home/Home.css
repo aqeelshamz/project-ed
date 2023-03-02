@@ -7,6 +7,17 @@
   justify-content: center;
   flex-direction: column;
 }
+.main .row {
+  display: flex;
+}
+.main #pro-btn {
+  background: white;
+  padding: 10px;
+  margin: 0 10px;
+  border-radius: 10px;
+  border: 0;
+  transition: 0.2s;
+}
 .main #title {
   font-size: 4rem;
   font-weight: 500;
@@ -17,8 +28,9 @@
 }
 .main #button {
   cursor: pointer;
+  background: white;
   padding: 15px 40px;
-  border-radius: 20px;
+  border-radius: 15px;
   border: 0;
   transition: 0.1s;
   font-size: 1.2rem;
@@ -26,6 +38,10 @@
 .main #button:hover {
   transform: scale(1.04);
 }
+.main #pro-btn:active,
 .main #button:active {
   transform: scale(0.95);
+}
+.main #pro-range {
+  width: 400px;
 }/*# sourceMappingURL=Home.css.map */
