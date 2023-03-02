@@ -21,18 +21,42 @@ function QnadA() {
     },
   };
 
-  let data = response.choices[0].text.split("\n");
+  let data = response.choices[0].text.split("\nQ");
   console.log(data);
 
+
+
+
+
+
+
+
+
+
+
+
   return (
-    <div className="bg-gray-600 flex justify-center items-center h-screen">
+    <div className="bg-gray-600 flex justify-center items-center min-h-screen">
       <div className="w-2/3 flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
         {/* <div className="bg-gray-200 text-gray-700 text-lg px-6 py-4">The title of the card here</div> */}
         {data.map((x, index) => {
+
           return (
             <>
-              <p>{x}</p>
-              <br />
+              {x && <div class="px-6 py-4 border-t border-gray-200">
+                <div class="border rounded-lg p-4 bg-gray-200">
+                  {(x.split("\nA")).map((y, index) => {
+                    return (
+                      <div>
+                        <p>{y}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+                <br />
+              </div>
+
+              }
             </>
           );
         })}
