@@ -4,7 +4,7 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 
 
 
-function PdfLink() {
+function PdfLinkPara() {
     return (
         <PDFDownloadLink document={<Print />} filename="FORM">
             {({ loading }) => (loading ? <button>Loading Document...</button> : <button>Download</button>)}
@@ -12,4 +12,4 @@ function PdfLink() {
     );
 }
 
-export default PdfLink;
+export default PdfLinkPara;
