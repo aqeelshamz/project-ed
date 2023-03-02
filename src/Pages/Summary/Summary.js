@@ -1,5 +1,6 @@
 import React from "react";
 import "./Summary.css";
+import PdfLinkPara from "../PrintPara/PdfLinkPara";
 
 function Summary() {
   return (
@@ -10,9 +11,10 @@ function Summary() {
         borderRadius: "10px",
         padding: "15px",
         width: "80%",
-        fontSize: "1rem",
+        fontSize: "1.23rem",
+
       }}>
-        <p id="title" className="text-center">📖 Summary</p>
+        <p id="title" className="text-center mb-3">📖 Summary</p>
         <p
 
         >
@@ -62,6 +64,8 @@ function Summary() {
           have shaped our world over the past century, highlighting the ongoing
           evolution of society and the continued quest for progress and knowledge.
         </p>
+        <div className="flex justify-end">
+          <PdfLinkPara /></div>
 
       </div>
     </div>
