@@ -3,6 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import PlayGround from "./Pages/Playground/Playground";
+import Print from "./Pages/Print/Print";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/PlayGround" element={<PlayGround/>} />
+          <Route exact path="/PlayGround" element={<PlayGround />} />
+          <Route exact path="/print" element={<Print />} />
         </Routes>
       </Router>
     </>
