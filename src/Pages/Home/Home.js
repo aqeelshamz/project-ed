@@ -7,7 +7,7 @@ function Home() {
 
   return (
     <div className="main">
-      <p id="title">Dypres</p>
+      <p id="title">Project Ed</p>
       <p id="subtitle">Dynamic Education</p>
       <br />
       <p

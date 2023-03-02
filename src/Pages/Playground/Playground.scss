@@ -43,12 +43,19 @@
       flex-direction: column;
     }
     .image {
+      background-repeat: no-repeat;
+      background-size: 100%;
       width: 100%;
       min-width: 400px;
       height: 100%;
       margin: 20px;
       background: red;
       border-radius: 10px;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: 100%;
+      }
     }
     #p-title {
       font-size: 2.2rem;
@@ -68,7 +75,7 @@
     background: white;
     padding: 10px;
     justify-content: center;
-    border-radius: 50px;
+    border-radius: 20px;
     .btn {
       cursor: pointer;
       display: flex;
@@ -78,7 +85,7 @@
       padding: 10px;
       height: 50px;
       width: 50px;
-      border-radius: 1000px;
+      border-radius: 10px;
       background: dodgerblue;
       color: white;
       font-weight: 500;
@@ -87,6 +94,24 @@
     .btn:hover {
       transform: scale(1.1);
       background: rgb(9, 95, 181);
+    }
+    .finish-btn {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+      padding: 10px;
+      height: 50px;
+      width: 50px;
+      border-radius: 15px;
+      background: rgb(18, 182, 133);
+      color: white;
+      font-weight: 500;
+      transition: 0.1s;
+    }
+    .finish-btn:hover {
+      background: rgb(9, 126, 91);
     }
   }
 }
