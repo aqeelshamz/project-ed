@@ -4,7 +4,7 @@
 .playground {
   width: 100vw;
   height: 100vh;
-  background: skyblue;
+  background: linear-gradient(45deg, #00C9FF 0%, #92FE9D 100%);
   display: flex;
   align-items: center;
   justify-content: center;

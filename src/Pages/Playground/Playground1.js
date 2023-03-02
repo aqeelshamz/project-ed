@@ -117,7 +117,7 @@ function Playground1() {
                   continuous: true,
                 });
               } else {
-                SpeechRecognition.stopListening();
+                SpeechRecognition.stopListening();  
               }
             }}
             style={{ background: listening ? "dodgerblue" : "#a61930" }}
