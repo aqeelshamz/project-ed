@@ -13,7 +13,7 @@ function Home() {
       <p
         style={{ fontSize: "1.2rem", fontWeight: "500", marginBottom: "10px" }}
       >
-        🎓 Audience Proficiency level:
+        🎓 Audience Proficiency level
       </p>
       <div className="row" style={{ marginBottom: "50px" }}>
         {proficiencyLevels.map((item, index) => {
