@@ -94,7 +94,7 @@ function Playground1() {
             color: showCaptions ? "white" : "grey",
           }}
         >
-          <FeatherIcon id="icon" icon="type" />
+          CC
         </div>
         <div
           className="btn"
