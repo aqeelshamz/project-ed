@@ -1,0 +1,66 @@
+.playground {
+  width: 100vw;
+  height: 100vh;
+  background: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .content {
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+    .image {
+      width: 100%;
+      min-width: 400px;
+      height: 100%;
+      margin: 20px;
+      background: red;
+      border-radius: 10px;
+    }
+    #p-title {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    #p-content {
+      font-size: 1.4rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .btn-container {
+    margin-top: 20px;
+    padding: 0px 10vw;
+    display: flex;
+    background: white;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 10px;
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+      padding: 10px;
+      height: 50px;
+      border-radius: 10px;
+      background: white;
+      color: black;
+      border: 2px solid black;
+      font-weight: 500;
+      transition: 0.1s;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+    }
+  }
+}
