@@ -4,13 +4,14 @@
   align-items: center;
   padding: 10px 10vw;
   width: 100vw;
-  height: 100vh;
-  background: rgb(207, 208, 230);
+  min-height: 100vh;
+  background:  #e9ecef;
 
   #title {
     color: black;
     font-size: 2.5rem;
     font-weight: bolder;
     margin-bottom: 20px;
+  
   }
 }
