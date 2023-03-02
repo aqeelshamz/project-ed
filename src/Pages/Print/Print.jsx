@@ -1,5 +1,8 @@
 import React from 'react';
 import { Page, Text, Image, Document, StyleSheet } from "@react-pdf/renderer";
+import photo from "./pexels-iam-hogir-11389808.jpg";
+
+
 
 const styles = StyleSheet.create({
     body: {
@@ -8,7 +11,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 35,
     },
     title: {
-        fontSize: 24,
+        fontSize: 35,
         textAlign: "center",
     },
     text: {
@@ -39,70 +42,41 @@ const styles = StyleSheet.create({
 });
 
 function Print() {
+    let response = {
+        "id": "cmpl-6pb9NPckY8ypAIeXpqeexwcJY6pPY",
+        "object": "text_completion",
+        "created": 1677755553,
+        "model": "text-davinci-003",
+        "choices": [
+            {
+                "text": "\n\nQ1: What period of time did the French Revolution last?\nA1: The French Revolution lasted from 1789 to 1799.\n\nQ2: What event marked the beginning of the French Revolution?\nA2: The beginning of the French Revolution was marked by the storming of the Bastille on July 14, 1789.\n\nQ3: What symbol of royal tyranny was stormed at the beginning of the French Revolution?\nA3: The Bastille, a symbol of royal tyranny, was stormed at the beginning of the French Revolution.\n\nQ4: Who rose to power at the end of the French Revolution?\nA4: Napoleon Bonaparte rose to power as the Emperor of France at the end of the French Revolution.\n\nQ5: How long did the French Revolution last?\nA5: The French Revolution lasted for 10 years, from 1789 to 1799.\n\nQ6: What date marked the beginning of the French Revolution?\nA6: The French Revolution began on July 14, 1789.\n\nQ7: What event marked the end of the French Revolution?\nA7: The end of the French Revolution was marked by the rise of Napoleon Bonaparte as the Emperor of France.\n\nQ8: What symbol of royal tyranny was stormed at the beginning of the French Revolution?\nA8: The Bastille, a symbol of royal tyranny, was stormed at the beginning of the French Revolution.\n\nQ9: Who was the leader of France at the end of the French Revolution?\nA9: Napoleon Bonaparte was the leader of France at the end of the French Revolution.\n\nQ10: How many years did the French Revolution last?\nA10: The French Revolution lasted for 10 years, from 1789 to 1799.",
+                "index": 0,
+                "logprobs": null,
+                "finish_reason": "stop"
+            }
+        ],
+        "usage": {
+            "prompt_tokens": 73,
+            "completion_tokens": 377,
+            "total_tokens": 450
+        }
+    };
+
+    let data = response.choices[0].text;
+
     return (
         <Document>
             <Page style={styles.body}>
-                <Text style={styles.header} fixed></Text>
-                <Image style={styles.image} src={"./pexels-iam-hogir-11389808.jpg"} />
+                <Text style={styles.title}>Sample question answers</Text>
+                {/* <Text style={styles.header} fixed>Summary</Text> */}
+                <Image style={styles.image} src={photo} />
+
                 <Text style={styles.text}>
-                    Oh right. I forgot about the battle. Wow, you got that off the
-                    Internet? In my day, the Internet was only used to download
-                    pornography. I don't know what you did, Fry, but once again, you
-                    screwed up! Now all the planets are gonna start cracking wise about
-                    our mamas. She also liked to shut up! We'll go deliver this crate like
-                    professionals, and then we'll go home. In your time, yes, but nowadays
-                    shut up! Besides, these are adult stemcells, harvested from perfectly
-                    healthy adults whom I killed for their stemcells. And I'm his friend
-                    Jesus. Incidentally, you have a dime up your nose. Oh, you're a dollar
-                    naughtier than most. Bender, being God isn't easy. If you do too much,
-                    people get dependent on you, and if you do nothing, they lose hope.
-                    You have to use a light touch. Like a safecracker, or a pickpocket.
-                    And why did 'I' have to take a cab? Perhaps, but perhaps your
-                    civilization is merely the sewer of an even greater society above you!
-                    Why would a robot need to drink? Stop! Don't shoot fire stick in space
-                    canoe! Cause explosive decompression! I'm sure those windmills will
-                    keep them cool. No! I want to live! There are still too many things I
-                    don't own! Now that the, uh, garbage ball is in space, Doctor, perhaps
-                    you can help me with my sexual inhibitions? I feel like I was mauled
-                    by Jesus. Anyhoo, your net-suits will allow you to experience Fry's
-                    worm infested bowels as if you were actually wriggling through them.
-                    Bender, I didn't know you liked cooking. That's so cute. Who am I
-                    making this out to? Aww, it's true. I've been hiding it for so long.
-                    Are you crazy? I can't swallow that. Bite my shiny metal ass. Leela's
-                    gonna kill me. You know, I was God once. There, now he's trapped in a
-                    book I wrote: a crummy world of plot holes and spelling errors! Yes!
-                    In your face, Gandhi! This is the worst kind of discrimination: the
-                    kind against me! No, I'm Santa Claus! You are the last hope of the
-                    universe. I am the man with no name, Zapp Brannigan! Why would I want
-                    to know that? I guess if you want children beaten, you have to do it
-                    yourself. Oh, I think we should just stay friends. No, just a regular
-                    mistake. I'm Santa Claus! And then the battle's not so bad? I daresay
-                    that Fry has discovered the smelliest object in the known universe!
-                    No! The kind with looting and maybe starting a few fires! Bender, quit
-                    destroying the universe! So, how 'bout them Knicks? Yes! In your face,
-                    Gandhi! For one beautiful night I knew what it was like to be a
-                    grandmother. Subjugated, yet honored. Bite my shiny metal ass. You
-                    know the worst thing about being a slave? They make you work, but they
-                    don't pay you or let you go. There's no part of that sentence I didn't
-                    like! And when we woke up, we had these bodies. Oh sure! Blame the
-                    wizards! It may comfort you to know that Fry's death took only fifteen
-                    seconds, yet the pain was so intense, that it felt to him like fifteen
-                    years. And it goes without saying, it caused him to empty his bowels.
-                    You guys aren't Santa! You're not even robots. How dare you lie in
-                    front of Jesus? Hey, whatcha watching? No, I'm Santa Claus! If rubbin'
-                    frozen dirt in your crotch is wrong, hey I don't wanna be right. Oh,
-                    you're a dollar naughtier than most. Then we'll go with that data
-                    file! Fry, we have a crate to deliver. And why did 'I' have to take a
-                    cab? I guess if you want children beaten, you have to do it yourself.
-                    Say it in Russian! Anyhoo, your net-suits will allow you to experience
-                    Fry's worm infested bowels as if you were actually wriggling through
-                    them. And I'm his friend Jesus. Now what? Your best is an idiot! Quite
-                    possible. We live long and are celebrated poopers. Switzerland is
-                    small and neutral! We are more like Germany, ambitious and
-                    misunderstood! I guess because my parents keep telling me to be more
-                    ladylike. As though! You know the worst thing about being a slave?
-                    They make you work, but they don't pay you or let you go.
-                </Text>
+                    {data}
+                </Text>;
+
+
+
                 <Text
                     style={styles.pageNumber}
                     render={({ pageNumber, totalPages }) =>
@@ -111,6 +85,9 @@ function Print() {
                 />
             </Page>
         </Document>
+
+
+
     );
 }
 

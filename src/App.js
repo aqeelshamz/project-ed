@@ -6,6 +6,7 @@ import Print from "./Pages/Print/Print";
 import PdfLink from "./Pages/Print/PdfLink";
 import Playground1 from "./Pages/Playground/Playground1";
 import Summary from "./Pages/Summary/Summary";
+import PdfLinkPara from "./Pages/PrintPara/PdfLinkPara";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/PlayGround" element={<Playground1 />} />
           <Route exact path="/summary" element={<Summary />} />
           <Route exact path="/print" element={<PdfLink />} />
+          <Route exact path="/printpara" element={<PdfLinkPara />} />
         </Routes>
       </Router>
     </>
