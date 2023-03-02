@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import PlayGround from "./Pages/Playground/Playground";
 import Print from "./Pages/Print/Print";
+import PdfLink from "./Pages/Print/PdfLink";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/PlayGround" element={<PlayGround />} />
-          <Route exact path="/print" element={<Print />} />
+          <Route exact path="/print" element={<PdfLink />} />
         </Routes>
       </Router>
     </>
