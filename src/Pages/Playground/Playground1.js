@@ -23,6 +23,9 @@ function Playground1() {
       </p>
       </div>
       <div className="content">
+        <div className="quote-box">
+            
+        </div>
         <div className="column" style={{ width: "400px" }}>
           <div className="image"></div>
           <div className="image"></div>

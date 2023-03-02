@@ -8,12 +8,21 @@
   flex-direction: column;
 
   .content {
+    position: relative;
     display: flex;
     width: 80vw;
     height: 80vh;
     background: white;
     border-radius: 15px;
-    overflow: hidden;
+    .quote-box{
+        border: 2px solid black;
+        position: absolute;
+        top: -10px;
+        right: 0;
+        width: 35%;
+        height: 150px;
+        background: white;
+    }
     .column {
       display: flex;
       flex-direction: column;

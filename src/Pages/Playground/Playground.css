@@ -8,12 +8,21 @@
   flex-direction: column;
 }
 .playground .content {
+  position: relative;
   display: flex;
   width: 80vw;
   height: 80vh;
   background: white;
   border-radius: 15px;
-  overflow: hidden;
+}
+.playground .content .quote-box {
+  border: 2px solid black;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  width: 35%;
+  height: 150px;
+  background: white;
 }
 .playground .content .column {
   display: flex;
