@@ -7,8 +7,8 @@ function Home() {
 
   return (
     <div className="main">
-      <p id="title">Dypres</p>
-      <p id="subtitle">Dynamic Education</p>
+      <p id="title">Project Ed</p>
+      <p id="subtitle">Realtime Speech Educational Presentation</p>
       <br />
       <p
         style={{ fontSize: "1.2rem", fontWeight: "500", marginBottom: "10px" }}

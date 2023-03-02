@@ -2,7 +2,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import PlayGround from "./Pages/Playground/Playground";
 import Print from "./Pages/Print/Print";
 import PdfLink from "./Pages/Print/PdfLink";
 import Playground1 from "./Pages/Playground/Playground1";
