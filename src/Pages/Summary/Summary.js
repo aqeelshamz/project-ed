@@ -71,7 +71,7 @@ function Summary() {
           ""
         )}
         {loading ? (
-          "Loading summary..."
+          "Generating summary..."
         ) : (
           <p style={{ padding: "15px" }}>{summary}</p>
         )}

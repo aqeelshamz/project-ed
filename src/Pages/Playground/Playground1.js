@@ -206,7 +206,23 @@ function Playground1() {
 
   return (
     <div className="playground">
-      <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          width: "100%",
+          padding: "0 50px",
+        }}
+      >
+        <div className="column" style={{cursor: "pointer", userSelect: "none"}} onClick={()=>window.location.href = "/"}>
+          <p style={{ fontSize: "1.7rem", fontWeight: "bold", color: "white" }}>
+            Project Ed
+          </p>
+          <p style={{ fontSize: "0.9rem", fontWeight: "600", color: "white" }}>
+            BIT LORDS
+          </p>
+        </div>
         <p
           style={{
             background: "white",
@@ -219,6 +235,14 @@ function Playground1() {
         >
           {proficiencyLevels[searchParams.get("level")]}
         </p>
+        <div className="column" style={{ opacity: "0" }}>
+          <p style={{ fontSize: "2rem", fontWeight: "bold", color: "white" }}>
+            ProjectEd
+          </p>
+          <p style={{ fontSize: "1rem", fontWeight: "500", color: "white" }}>
+            BIT LORDS
+          </p>
+        </div>
       </div>
       <div className="content">
         {/* <div className="quote-box"></div> */}
@@ -268,9 +292,9 @@ function Playground1() {
               .split("Slide Content:")[1]
               ?.toString()
               .split(".")
-              .map((item) => {
+              .map((item, index) => {
                 return item ? (
-                  <li style={{ marginBottom: "10px" }}>{item}</li>
+                  <li key={index} style={{ marginBottom: "10px" }}>{item}</li>
                 ) : (
                   ""
                 );

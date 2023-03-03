@@ -7,8 +7,13 @@ function Home() {
 
   return (
     <div className="main">
-      <p id="title">Project Ed</p>
-      <p id="subtitle">Realtime Speech Educational Presentation</p>
+      <div className="column">
+        <p id="title">Project Ed</p>
+        <p style={{ fontSize: "1.4rem", fontWeight: "700", color: "white" }}>
+          BIT LORDS
+        </p>
+      </div>
+      <p id="subtitle">Dynamic Educational Presentation using AI & NLP</p>
       <br />
       <p
         style={{ fontSize: "1.2rem", fontWeight: "500", marginBottom: "20px" }}
@@ -21,7 +26,10 @@ function Home() {
             <button
               id="pro-btn"
               style={{
-                background: proLevel === index ? "linear-gradient(45deg, #1d92ff, #05c79d)" : "white",
+                background:
+                  proLevel === index
+                    ? "linear-gradient(45deg, #1d92ff, #05c79d)"
+                    : "white",
                 color: proLevel === index ? "white" : "black",
               }}
               onClick={() => setProLevel(index)}
@@ -35,7 +43,7 @@ function Home() {
         id="button"
         onClick={() => (window.location.href = "/PlayGround?level=" + proLevel)}
       >
-        Go to PlayGround ⚡
+        Start presenting
       </button>
     </div>
   );
