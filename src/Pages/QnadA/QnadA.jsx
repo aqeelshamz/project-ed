@@ -74,32 +74,39 @@ function QnadA() {
   return (
     <div className="bg-gray-600 flex justify-center items-center min-h-screen">
       {loading ? (
-        <p style={{ fontWeight: "500", color: "white", fontSize: "2.2rem" }}>Generating Q & A...</p>
+        <p style={{ fontWeight: "500", color: "white", fontSize: "2.2rem" }}>Generating  Q & A...</p>
       ) : (
-        <div className="w-2/3 flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
-          {/* <div className="bg-gray-200 text-gray-700 text-lg px-6 py-4">The title of the card here</div> */}
-          {fetchedData?.split("\n")?.map((x, index) => {
-            return (
-              x && (
-                <div className="px-6 py-4 border-t border-gray-200">
-                  <div className="border rounded-lg p-4 bg-gray-200">
-                    <p style={{ fontWeight: "500" }}>
-                      {index}❓ {x?.split("\nA")[0]}
-                    </p>
-                    <br />
-                    <p>✅ {x?.split("\nA")[1]}</p>
+        <>
+          {/* <div className=""> <p className="to-white font-semibold">Sample question answers</p></div> */}
+
+          <div className="w-2/3 flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
+
+            {/* <div className="bg-gray-200 text-gray-700 text-lg px-6 py-4">The title of the card here</div> */}
+            {fetchedData?.split("\n\n")?.map((x, index) => {
+              return (
+
+
+
+                x && <div class="px-6 py-4 border-t border-gray-200">
+                  <div class="border rounded-lg p-4 bg-gray-200">
+                    {(x.split(`\nA`)).map((y, index) => {
+                      return (
+                        <div>
+                          <p>{y}</p>
+                        </div>
+                      );
+                    })}
                   </div>
                   <br />
                 </div>
-              )
-            );
-          })}
-          <div className="flex justify-end">
-            {/* <button onClick={handlePrint}>Print</button> */}
-            <PdfLink data={fetchedData} image={localStorage.getItem("image")} />
+              );
+            })}
+            <div className="flex justify-end">
+              {/* <button onClick={handlePrint}>Print</button> */}
+              <PdfLink data={fetchedData} image={localStorage.getItem("image")} />
+            </div>
           </div>
-        </div>
-      )}
+        </>)}
     </div>
   );
 }
