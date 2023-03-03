@@ -1,13 +1,11 @@
-
 import React, { useEffect, useState } from "react";
 import { openAIKey } from "../../utils/utils";
 import axios from "axios";
 import PdfLink from "../Print/PdfLink";
 
-
-function QnadA({ summary }) {
+function QnadA() {
   const [loading, setLoading] = useState(true);
-  const [fetchedData, setFetchedData] = useState("");
+  const [fetchedData, setFetchedData] = useState();
 
   let response = {
     id: "cmpl-6pb9NPckY8ypAIeXpqeexwcJY6pPY",
@@ -29,10 +27,8 @@ function QnadA({ summary }) {
     },
   };
 
-  let data = JSON.parse(JSON.stringify(fetchedData));
+  //   let data = JSON.parse(JSON.stringify(fetchedData));
   //console.log(data);
-
-
 
   const fetchData = (keywords) => {
     const config = {
@@ -45,8 +41,9 @@ function QnadA({ summary }) {
       data: {
         model: "text-davinci-003",
         prompt:
-          summary
-            .replaceAll("\n", "")
+          localStorage
+            .getItem("summary")
+            ?.replaceAll("\n", "")
             .split(",")
             .join("\n") +
           `\n\nCreate a 10 question and answers  from the above phrases.`,
@@ -59,51 +56,31 @@ function QnadA({ summary }) {
       setLoading(false);
       console.log(response.data?.choices[0]?.text);
       setFetchedData(response.data?.choices[0]?.text);
-      localStorage.clear();
     });
   };
-
-
 
   useEffect(() => {
     fetchData();
   }, []);
 
-
-
-
-
-
-
   return (
     <div className="bg-gray-600 flex justify-center items-center min-h-screen">
       <div className="w-2/3 flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
         {/* <div className="bg-gray-200 text-gray-700 text-lg px-6 py-4">The title of the card here</div> */}
-        {data.map((x, index) => {
-
+        {fetchedData?.split("\n\n")?.map((x, index) => {
           return (
-            <>
-              {x && <div className="px-6 py-4 border-t border-gray-200">
-                <div className="border rounded-lg p-4 bg-gray-200">
-                  {(x.split("\nA")).map((y, index) => {
-                    return (
-                      <div>
-                        <p>{y}</p>
-                      </div>
-                    );
-                  })}
-                </div>
-                <br />
+            <div className="px-6 py-4 border-t border-gray-200">
+              <div className="border rounded-lg p-4 bg-gray-200">
+                <p>{x.split("A")[0]}</p>
+                <p>{x.split("A")[1]}</p>
               </div>
-
-              }
-              <div className="flex justify-end">
-                <PdfLink data={fetchedData} image={localStorage.getItem("image")} />
-
-              </div>
-            </>
+              <br />
+            </div>
           );
         })}
+        <div className="flex justify-end">
+          <PdfLink data={fetchedData} image={localStorage.getItem("image")} />
+        </div>
       </div>
     </div>
   );

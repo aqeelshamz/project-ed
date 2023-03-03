@@ -11,7 +11,7 @@ function Home() {
       <p id="subtitle">Realtime Speech Educational Presentation</p>
       <br />
       <p
-        style={{ fontSize: "1.2rem", fontWeight: "500", marginBottom: "10px" }}
+        style={{ fontSize: "1.2rem", fontWeight: "500", marginBottom: "20px" }}
       >
         🎓 Audience Proficiency level
       </p>
@@ -21,7 +21,7 @@ function Home() {
             <button
               id="pro-btn"
               style={{
-                background: proLevel === index ? "dodgerblue" : "white",
+                background: proLevel === index ? "linear-gradient(45deg, #1d92ff, #05c79d)" : "white",
                 color: proLevel === index ? "white" : "black",
               }}
               onClick={() => setProLevel(index)}

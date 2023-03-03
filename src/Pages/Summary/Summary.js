@@ -34,7 +34,7 @@ function Summary() {
     axios(config).then((response) => {
       setLoading(false);
       setSummary(response.data?.choices[0]?.text);
-      // localStorage.clear();
+      localStorage.setItem("summary", response.data?.choices[0]?.text);
     });
   };
 
@@ -60,14 +60,26 @@ function Summary() {
         {loading ? (
           ""
         ) : localStorage.getItem("image") ? (
-          <img src={localStorage.getItem("image")} alt={"Summary Image"} />
+          <div className="flex justify-center mb-10">
+            <img
+              src={localStorage.getItem("image")}
+              alt={"Summary Image"}
+              width="300"
+            />
+          </div>
         ) : (
           ""
         )}
-        {loading ? "Loading summary..." : <p>{summary}</p>}
+        {loading ? (
+          "Loading summary..."
+        ) : (
+          <p style={{ padding: "15px" }}>{summary}</p>
+        )}
         <div className="flex justify-end">
           <PdfLinkPara data={summary} image={localStorage.getItem("image")} />
-          <Link to={"/print"} summary={summary} >q and a</Link>
+          <Link to={"/print"} summary={summary}>
+            q and a
+          </Link>
         </div>
       </div>
     </div>

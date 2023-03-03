@@ -191,9 +191,14 @@ function Playground1() {
     };
 
     axios(config).then((response) => {
-      getImages(
-        response.data?.choices[0]?.text?.toString().replaceAll("\n", "")
-      );
+      var resp = response.data?.choices[0]?.text
+        ?.toString()
+        .replaceAll("\n", "")
+        .replaceAll('"', "");
+      if (resp.includes("(")) {
+        resp = resp.split("(")[0];
+      }
+      getImages(resp);
     });
   };
 
