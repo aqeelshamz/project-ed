@@ -95,7 +95,7 @@ function QnadA() {
             );
           })}
           <div className="flex justify-end">
-            <button onClick={handlePrint}>Print</button>
+            {/* <button onClick={handlePrint}>Print</button> */}
             <PdfLink data={fetchedData} image={localStorage.getItem("image")} />
           </div>
         </div>
