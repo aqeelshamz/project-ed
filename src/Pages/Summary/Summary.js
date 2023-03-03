@@ -3,6 +3,7 @@ import "./Summary.css";
 import PdfLinkPara from "../PrintPara/PdfLinkPara";
 import { openAIKey } from "../../utils/utils";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Summary() {
   const [loading, setLoading] = useState(true);
@@ -66,6 +67,7 @@ function Summary() {
         {loading ? "Loading summary..." : <p>{summary}</p>}
         <div className="flex justify-end">
           <PdfLinkPara data={summary} image={localStorage.getItem("image")} />
+          <Link to={"/print"} summary={summary} >q and a</Link>
         </div>
       </div>
     </div>

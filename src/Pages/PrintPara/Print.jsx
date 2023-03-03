@@ -39,13 +39,13 @@ const styles = StyleSheet.create({
     },
 });
 
-function Print({data, image}) {
+function Print({ data, image }) {
     return (
         <Document>
             <Page style={styles.body}>
                 <Text style={styles.title}>Summary</Text>
                 {/* <Text style={styles.header} fixed>Summary</Text> */}
-                {image ? <Image style={styles.image} src={image} /> : ""}
+                {image && <Image style={styles.image} src={image} />}
 
                 <Text style={styles.text}>
                     {data}

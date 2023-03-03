@@ -1,6 +1,14 @@
-import React from "react";
 
-function QnadA() {
+import React, { useEffect, useState } from "react";
+import { openAIKey } from "../../utils/utils";
+import axios from "axios";
+import PdfLink from "../Print/PdfLink";
+
+
+function QnadA({ summary }) {
+  const [loading, setLoading] = useState(true);
+  const [fetchedData, setFetchedData] = useState("");
+
   let response = {
     id: "cmpl-6pb9NPckY8ypAIeXpqeexwcJY6pPY",
     object: "text_completion",
@@ -21,13 +29,45 @@ function QnadA() {
     },
   };
 
-  let data = response.choices[0].text.split("\nQ");
-  console.log(data);
+  let data = JSON.parse(JSON.stringify(fetchedData));
+  //console.log(data);
 
 
 
+  const fetchData = (keywords) => {
+    const config = {
+      method: "POST",
+      url: "https://api.openai.com/v1/completions",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${openAIKey}`,
+      },
+      data: {
+        model: "text-davinci-003",
+        prompt:
+          summary
+            .replaceAll("\n", "")
+            .split(",")
+            .join("\n") +
+          `\n\nCreate a 10 question and answers  from the above phrases.`,
+        max_tokens: 3000,
+        temperature: 0,
+      },
+    };
+
+    axios(config).then((response) => {
+      setLoading(false);
+      console.log(response.data?.choices[0]?.text);
+      setFetchedData(response.data?.choices[0]?.text);
+      localStorage.clear();
+    });
+  };
 
 
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
 
 
@@ -43,8 +83,8 @@ function QnadA() {
 
           return (
             <>
-              {x && <div class="px-6 py-4 border-t border-gray-200">
-                <div class="border rounded-lg p-4 bg-gray-200">
+              {x && <div className="px-6 py-4 border-t border-gray-200">
+                <div className="border rounded-lg p-4 bg-gray-200">
                   {(x.split("\nA")).map((y, index) => {
                     return (
                       <div>
@@ -57,6 +97,10 @@ function QnadA() {
               </div>
 
               }
+              <div className="flex justify-end">
+                <PdfLink data={fetchedData} image={localStorage.getItem("image")} />
+
+              </div>
             </>
           );
         })}

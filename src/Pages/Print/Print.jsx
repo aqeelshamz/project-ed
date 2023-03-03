@@ -41,13 +41,13 @@ const styles = StyleSheet.create({
     },
 });
 
-function Print({data}) {
+function Print({ data, image }) {
     return (
         <Document>
             <Page style={styles.body}>
                 <Text style={styles.title}>Sample question answers</Text>
                 {/* <Text style={styles.header} fixed>Summary</Text> */}
-                <Image style={styles.image} src={photo} />
+                {image && <Image style={styles.image} src={image} />}
 
                 <Text style={styles.text}>
                     {data}
