@@ -69,10 +69,10 @@ function QnadA() {
         {/* <div className="bg-gray-200 text-gray-700 text-lg px-6 py-4">The title of the card here</div> */}
         {fetchedData?.split("\n\n")?.map((x, index) => {
           return (
-            <div className="px-6 py-4 border-t border-gray-200">
+            x && <div className="px-6 py-4 border-t border-gray-200">
               <div className="border rounded-lg p-4 bg-gray-200">
-                <p>{x.split("A")[0]}</p>
-                <p>{x.split("A")[1]}</p>
+                <p style={{fontWeight: "500"}}>{index}❓ {x?.split("A")[0]?.split(". ")[1]}</p><br/>
+                <p>✅ {x?.split("A")[1]?.split(". ")[1]}</p>
               </div>
               <br />
             </div>
