@@ -74,7 +74,7 @@ function QnadA() {
   return (
     <div className="bg-gray-600 flex justify-center items-center min-h-screen">
       {loading ? (
-        <p style={{ fontWeight: "500", color: "white", fontSize: "1.2rem" }}>Loading Q & A...</p>
+        <p style={{ fontWeight: "500", color: "white", fontSize: "2.2rem" }}>Loading Q & A...</p>
       ) : (
         <div className="w-2/3 flex flex-col bg-white shadow-lg rounded-lg overflow-hidden">
           {/* <div className="bg-gray-200 text-gray-700 text-lg px-6 py-4">The title of the card here</div> */}
