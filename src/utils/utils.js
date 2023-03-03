@@ -16,6 +16,6 @@ const proficiencyPrompt = {
   5: "expert"
 };
 
-const openAIKey = "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";
+const openAIKey = "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";
 
 export { proficiencyLevels, openAIKey, proficiencyPrompt };
