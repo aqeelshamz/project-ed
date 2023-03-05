@@ -1,4 +1,4 @@
-Project: Real-time Educational Presentation from Speech using AI and NLP
+Project Ed: Real-time Educational Presentation from Speech using AI and NLP
 ========================================================================
 
 Abstract
@@ -21,7 +21,7 @@ Target audience
 -   Educators
 -   Lecturers
 -   Speakers of all types
--   Online meetings (Google Meet/Zoom)
+-   Online meetings (Google Meet/Zoom/Microsoft Teams)
 
 Benefits
 --------
