@@ -6,8 +6,6 @@ Abstract
 
 Are you tired of spending hours preparing presentations for your classes or meetings? Our AI-powered educational presentation generator can save you time and effort by dynamically creating presentations in real-time based on your live speech input. With the ability to generate text and images from Wikipedia and other sources, you can be sure that your presentation will always be informative and up-to-date. Plus, with the option to adjust the level of expertise for your target audience, you can customize your presentation to meet the needs of any group. And, once you're finished, the system can even generate a summary and export it to a PDF document for easy study materials. Say goodbye to boring presentations and hello to engaging and informative ones with our AI-powered educational presentation generator.
 
-[![YouTube videoT](http://img.youtube.com/vi/a8TF_7F7iCI/0.jpg)](http://www.youtube.com/watch?v=a8TF_7F7iCI "Project Ed - Pitch | Bit Lords")
-
 Features
 --------
 
@@ -43,4 +41,5 @@ Conclusion
 
 The AI-powered educational presentation generator offers a powerful tool for delivering engaging and informative presentations for educational purposes. By automating the process of creating presentations, it saves time and effort while providing up-to-date and informative content. With its customizable expertise levels and study materials generation, it caters to different target audiences and aids in learning and studying.
 
-[Read blogpost](https://blog.anuragp.ml/project-ed)
+📺 [Watch video](https://www.youtube.com/watch?v=a8TF_7F7iCI) <br>
+📄 [Read blogpost](https://blog.anuragp.ml/project-ed)
