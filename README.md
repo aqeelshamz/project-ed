@@ -41,5 +41,4 @@ Conclusion
 
 The AI-powered educational presentation generator offers a powerful tool for delivering engaging and informative presentations for educational purposes. By automating the process of creating presentations, it saves time and effort while providing up-to-date and informative content. With its customizable expertise levels and study materials generation, it caters to different target audiences and aids in learning and studying.
 
-📺 [Watch video](https://www.youtube.com/watch?v=a8TF_7F7iCI) <br>
-📄 [Read blogpost](https://blog.anuragp.ml/project-ed)
+📺 [Watch video](https://www.youtube.com/watch?v=a8TF_7F7iCI)
